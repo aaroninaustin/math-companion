@@ -1,0 +1,1222 @@
+{
+  "expeditions": [
+    {
+      "id": "exp1",
+      "title": "Algebraic Foundations",
+      "theme": "Building Solid Ground",
+      "order": 1,
+      "locked": false,
+      "funFact": "The word 'algebra' comes from the title of a 9th-century book by Persian mathematician al-Khw\u0101rizm\u012b: 'Al-Kit\u0101b al-mukhta\u1e63ar f\u012b \u1e25is\u0101b al-jabr wal-muq\u0101bala' \u2014 the word al-jabr became algebra.",
+      "jobConnection": "Every statistical formula you'll encounter is built on these foundations. Understanding algebra deeply means you can read and manipulate formulas instead of treating them as magic spells.",
+      "units": [
+        {
+          "id": "exp1_unit1",
+          "title": "Variables, Expressions & Equations",
+          "order": 1,
+          "estimatedMinutes": 90,
+          "description": "The building blocks of all mathematical thinking. We're not just reviewing algebra \u2014 we're rebuilding your mental model of what math is.",
+          "objectives": [
+            "What variables actually are (and why they're powerful)",
+            "The difference between expressions and equations",
+            "How to read and manipulate equations with confidence",
+            "What 'solving' really means conceptually",
+            "How all of this shows up in your analytics work"
+          ],
+          "orientation": "A quick orientation. This unit might feel basic \u2014 and parts of it will be. But resist the urge to skim. We're not just reviewing algebra. We're rebuilding your mental model of what math is, so that when things get hard later, you have solid ground to stand on. The single biggest difference between people who 'get' advanced math and those who don't? The second group memorized procedures. The first group understood what the symbols mean. We're going for the second group.",
+          "sections": [
+            {
+              "id": "exp1_unit1_lesson1",
+              "type": "lesson",
+              "title": "What is a Variable?",
+              "order": 1,
+              "estimatedMinutes": 15,
+              "content": "A variable is simply a name we give to a quantity we don't know yet, or a quantity that can change. That's it. No mystery.\n\nWhen you write `revenue = price \u00d7 units_sold`, price and units_sold are variables. They vary. Revenue changes depending on what values they hold. You do this kind of thinking every day \u2014 math just gives it a formal notation.\n\nThe classic notation uses single letters: x, y, n, p, \u03bc, \u03c3. This is just convention \u2014 shorthand. When statisticians write \u03bc (mu), they mean 'the true average of a population.' When they write p, they often mean 'a probability.' The letters are just agreed-upon nicknames.\n\nThe key insight: A variable is a placeholder for a value. Once you give it a value, the placeholder becomes concrete.",
+              "keyInsight": "A variable is a placeholder for a value. Once you give it a value, the placeholder becomes concrete.",
+              "resource": {
+                "title": "Introduction to Variables",
+                "url": "https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:foundation-algebra/x2f8bb11595b61c86:intro-variables/v/what-is-a-variable",
+                "source": "Khan Academy"
+              }
+            },
+            {
+              "id": "exp1_unit1_lesson2",
+              "type": "lesson",
+              "title": "Expressions vs. Equations",
+              "order": 2,
+              "estimatedMinutes": 15,
+              "content": "These two words get used interchangeably in conversation. In math, they mean different things.\n\nAn expression is a mathematical phrase \u2014 it has value, but no claim about equality. `3x + 7` says: 'take some number x, multiply it by 3, then add 7.' It doesn't make a claim. It's just a calculation waiting for a value of x.\n\nAn equation is a statement that two things are equal. It always has an = sign. `3x + 7 = 22` means: 'there exists a value of x such that 3x + 7 equals 22.' The equation is either true or false for any given x. Our job is to find the x that makes it true.\n\nThink of it this way: An expression is like a recipe. An equation is like a recipe where someone tells you the dish came out to exactly 600 calories \u2014 and you have to figure out how much butter they used.",
+              "keyInsight": "An expression describes a calculation. An equation makes a claim \u2014 that two expressions are equal."
+            },
+            {
+              "id": "exp1_unit1_lesson3",
+              "type": "lesson",
+              "title": "The Balance Model",
+              "order": 3,
+              "estimatedMinutes": 20,
+              "content": "Here's the most important way to think about equations: An equation is a perfectly balanced scale. The = sign is the fulcrum. Both sides weigh exactly the same.\n\nYour only rule is: whatever you do to one side, you must do to the other.\n\nThis isn't a trick or a procedure to memorize. It's just logic. If two things are equal and you do the same thing to both of them, they're still equal.\n\nExample: `3x + 7 = 22`\n\nStep 1: Subtract 7 from both sides \u2192 `3x = 15`\nStep 2: Divide both sides by 3 \u2192 `x = 5`\nCheck: Does 3(5) + 7 = 22? \u2192 15 + 7 = 22 \u2713\n\n'Solving' an equation just means isolating the variable \u2014 getting it alone on one side of the scale.",
+              "keyInsight": "Whatever you do to one side of an equation, you must do to the other. This is the entire foundation of algebra.",
+              "hasBalanceScale": true
+            },
+            {
+              "id": "exp1_unit1_lesson4",
+              "type": "lesson",
+              "title": "Multiple Variables & Rearranging",
+              "order": 4,
+              "estimatedMinutes": 20,
+              "content": "Most real equations have more than one variable. You won't always be solving for a number \u2014 often you'll be rearranging to express one variable in terms of others. This is a critical skill.\n\nTake click-through rate: `CTR = clicks / impressions`\n\nDepending on what you know and what you need, you can rearrange it.\n\n'I know CTR and impressions. How many clicks does that imply?'\nMultiply both sides by impressions: `clicks = CTR \u00d7 impressions`\n\nSame equation. Rearranged. New question answered.\n\nThis is something you'll do constantly with statistical formulas. The formula isn't a fixed thing you look up \u2014 it's a relationship you can manipulate.",
+              "keyInsight": "A formula is not a fixed procedure \u2014 it's a relationship between variables that you can rearrange to answer any question you need."
+            },
+            {
+              "id": "exp1_unit1_scenario",
+              "type": "scenario",
+              "title": "The Broken Metric",
+              "order": 5,
+              "estimatedMinutes": 10,
+              "content": "You're looking at an experiment dashboard. It shows a conversion rate of 4.2% for your treatment group, from a sample of 10,000 visitors. Someone asks: 'How many actual conversions was that?'\n\nYou know the relationship: `conversion_rate = conversions / visitors`\n\nRearrange: `conversions = conversion_rate \u00d7 visitors = 0.042 \u00d7 10,000 = 420`\n\nNow it gets interesting. Suppose your data pipeline is misbehaving and you're seeing:\n- conversion_rate = 4.2%\n- visitors = 10,000\n- conversions = 391\n\nAlgebraic thinking immediately tells you: something is inconsistent. One of those three numbers is wrong.\n\nYou don't need a statistics degree to catch data quality problems \u2014 you need to understand equations."
+            },
+            {
+              "id": "exp1_unit1_rabbithole",
+              "type": "rabbit_hole",
+              "title": "The Story of 'X'",
+              "order": 6,
+              "estimatedMinutes": 5,
+              "content": "Why do we use x as the default unknown? Historians have actually traced this.\n\nThe Arabic word for 'thing' or 'unknown quantity' was \u0634\u064a\u0621 (shay). When Arab mathematical texts were translated into Spanish in the Middle Ages, translators used xei (the Spanish x sound approximated 'sh'). This got shortened to just x.\n\nSo when you see x in a formula, you're looking at a 1,000-year-old game of telephone that started with the Arabic word for 'thing.'\n\nRen\u00e9 Descartes standardized the use of x, y, z for unknowns in his 1637 work La G\u00e9om\u00e9trie \u2014 the same book that invented the coordinate plane. Coincidence that we plot things on x and y axes? Not at all."
+            },
+            {
+              "id": "exp1_unit1_practice",
+              "type": "practice",
+              "title": "Practice Problems",
+              "order": 7,
+              "estimatedMinutes": 15,
+              "problems": [
+                {
+                  "id": "p1",
+                  "type": "solve",
+                  "question": "Solve for x: 5x - 3 = 17",
+                  "answer": "4",
+                  "hint": "Add 3 to both sides first, then divide by 5.",
+                  "explanation": "5x - 3 = 17 \u2192 5x = 20 \u2192 x = 4. Check: 5(4) - 3 = 17 \u2713"
+                },
+                {
+                  "id": "p2",
+                  "type": "rearrange",
+                  "question": "You have the sample size formula: n = (Z\u00b2 \u00d7 p \u00d7 (1-p)) / E\u00b2. Rearrange to solve for E (the margin of error you can detect).",
+                  "answer": "E = \u221a(Z\u00b2 \u00d7 p \u00d7 (1-p) / n)",
+                  "hint": "Multiply both sides by E\u00b2, then divide both sides by n, then take the square root.",
+                  "explanation": "Start: n = (Z\u00b2 \u00d7 p \u00d7 (1-p)) / E\u00b2. Multiply both sides by E\u00b2: n \u00d7 E\u00b2 = Z\u00b2 \u00d7 p \u00d7 (1-p). Divide both sides by n: E\u00b2 = Z\u00b2 \u00d7 p \u00d7 (1-p) / n. Take the square root: E = \u221a(Z\u00b2 \u00d7 p \u00d7 (1-p) / n)"
+                },
+                {
+                  "id": "p3",
+                  "type": "consistency_check",
+                  "question": "A colleague says: 'Our experiment had 50,000 visitors, a 3% conversion rate, and 1,600 conversions.' Is this internally consistent?",
+                  "answer": "No \u2014 50,000 \u00d7 0.03 = 1,500, not 1,600.",
+                  "hint": "Use conversions = conversion_rate \u00d7 visitors and check the math.",
+                  "explanation": "conversions = 0.03 \u00d7 50,000 = 1,500. The reported 1,600 doesn't match \u2014 one of the three numbers must be wrong. This is a data quality issue."
+                },
+                {
+                  "id": "p4",
+                  "type": "algebraic_reasoning",
+                  "question": "If revenue = price \u00d7 quantity, and revenue goes up by 10% while quantity stays the same \u2014 what happened to price? Express this algebraically.",
+                  "answer": "Price increased by 10%",
+                  "hint": "Write the original and new equations. Let original price = P. New revenue = 1.1 \u00d7 P \u00d7 quantity.",
+                  "explanation": "Original: R = P \u00d7 Q. New: 1.1R = P_new \u00d7 Q. Dividing: P_new = 1.1 \u00d7 P \u00d7 Q / Q = 1.1P. Price increased by 10%."
+                }
+              ]
+            },
+            {
+              "id": "exp1_unit1_quiz",
+              "type": "quiz",
+              "title": "Unit Quiz",
+              "order": 8,
+              "estimatedMinutes": 10,
+              "questions": [
+                {
+                  "id": "q1",
+                  "type": "multiple_choice",
+                  "question": "Which of the following is an expression (not an equation)?",
+                  "options": [
+                    "3x + 7 = 22",
+                    "3x + 7",
+                    "x = 5",
+                    "CTR = clicks / impressions"
+                  ],
+                  "answer": 1,
+                  "explanation": "3x + 7 has no equals sign \u2014 it describes a calculation but makes no claim about equality. The others all have = signs and are equations."
+                },
+                {
+                  "id": "q2",
+                  "type": "multiple_choice",
+                  "question": "Solve for x: 5x - 3 = 17. What is x?",
+                  "options": [
+                    "x = 2.8",
+                    "x = 3",
+                    "x = 4",
+                    "x = 5"
+                  ],
+                  "answer": 2,
+                  "explanation": "5x - 3 = 17 \u2192 5x = 20 \u2192 x = 4. Verify: 5(4) - 3 = 17 \u2713"
+                },
+                {
+                  "id": "q3",
+                  "type": "multiple_choice",
+                  "question": "Given CTR = clicks / impressions, rearranging to solve for clicks gives:",
+                  "options": [
+                    "clicks = CTR - impressions",
+                    "clicks = CTR / impressions",
+                    "clicks = CTR \u00d7 impressions",
+                    "clicks = impressions / CTR"
+                  ],
+                  "answer": 2,
+                  "explanation": "Multiply both sides by impressions: CTR \u00d7 impressions = clicks. So clicks = CTR \u00d7 impressions."
+                },
+                {
+                  "id": "q4",
+                  "type": "multiple_choice",
+                  "question": "A colleague reports: 50,000 visitors, 3% conversion rate, 1,600 conversions. This data is:",
+                  "options": [
+                    "Consistent \u2014 the math checks out",
+                    "Inconsistent \u2014 correct conversions would be 1,500",
+                    "Inconsistent \u2014 correct conversions would be 1,667",
+                    "Can't be determined without more info"
+                  ],
+                  "answer": 1,
+                  "explanation": "0.03 \u00d7 50,000 = 1,500. The reported 1,600 doesn't match, so the data is internally inconsistent."
+                },
+                {
+                  "id": "q5",
+                  "type": "multiple_choice",
+                  "question": "Revenue = price \u00d7 quantity. Revenue increases 10%, quantity stays the same. Price:",
+                  "options": [
+                    "Stays the same",
+                    "Increases by 10%",
+                    "Increases by 20%",
+                    "Decreases by 10%"
+                  ],
+                  "answer": 1,
+                  "explanation": "If 1.1R = P_new \u00d7 Q and R = P \u00d7 Q, then P_new = 1.1P. Price increased by 10%."
+                }
+              ],
+              "checklist": [
+                "Explain the difference between an expression and an equation in plain English",
+                "Solve a single-variable equation by applying the balance model",
+                "Rearrange a multi-variable formula to isolate any variable",
+                "Recognize when a set of numbers is internally inconsistent"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "exp1_unit2",
+          "title": "Functions: What They Really Are",
+          "order": 2,
+          "estimatedMinutes": 90,
+          "description": "The most important concept in mathematics for data work. A function is the formal way of saying 'this input produces this output' \u2014 and once you truly understand functions, regression, distributions, and ML models all snap into focus.",
+          "objectives": [
+            "Understand functions as input\u2192output mappings",
+            "Read function notation f(x)",
+            "Distinguish linear from nonlinear functions",
+            "Connect functions to real analytics scenarios"
+          ],
+          "preview": "Next up after Unit 1",
+          "sections": [
+            {
+              "id": "exp1_unit2_lesson1",
+              "type": "lesson",
+              "title": "What Is a Function?",
+              "order": 1,
+              "estimatedMinutes": 20,
+              "content": "A function is a rule that takes an input and produces exactly one output. Write f(x) = 2x + 3, and you have a machine: put in any number for x, get out a unique result.\n\nIn analytics, functions are everywhere: `revenue(units) = price \u00d7 units` is a function. A regression model is a function. A probability distribution is a function.\n\nThe key property: one input \u2192 one output. That uniqueness is what makes functions mathematically powerful.",
+              "keyInsight": "A function is a deterministic machine: same input always produces the same output."
+            },
+            {
+              "id": "exp1_unit2_lesson2",
+              "type": "lesson",
+              "title": "Function Notation",
+              "order": 2,
+              "estimatedMinutes": 15,
+              "content": "When you see f(x), read it as 'f of x' \u2014 the value of function f at input x.\n\nf(3) means 'evaluate f when x = 3'. If f(x) = 2x + 3, then f(3) = 2(3) + 3 = 9.\n\nYou'll see this notation constantly in statistics: P(X = k) means 'the probability that random variable X takes value k.' That's a function.",
+              "keyInsight": "f(x) is not f times x \u2014 it's the output of function f when given input x."
+            },
+            {
+              "id": "exp1_unit2_lesson3",
+              "type": "lesson",
+              "title": "Linear vs. Nonlinear Functions",
+              "order": 3,
+              "estimatedMinutes": 20,
+              "content": "A linear function has the form f(x) = mx + b. Graph it and you get a straight line. The change in output per unit change in input is constant \u2014 that constant is the slope m.\n\nNonlinear functions curve. f(x) = x\u00b2 grows faster and faster. f(x) = log(x) grows slower and slower. f(x) = e\u02e3 grows explosively.\n\nWhy it matters: linear regression assumes a linear relationship. When that assumption breaks down, you need nonlinear models \u2014 but understanding the linear case deeply is the prerequisite.",
+              "keyInsight": "In a linear function, equal changes in input produce equal changes in output. Nonlinear functions violate this \u2014 and that's often where the interesting behavior lives."
+            },
+            {
+              "id": "exp1_unit2_scenario",
+              "type": "scenario",
+              "title": "Is This Relationship Linear?",
+              "order": 4,
+              "estimatedMinutes": 15,
+              "content": "You're looking at spend vs. revenue data. As you increase ad spend from $0 to $1,000, revenue grows quickly. From $1,000 to $2,000, it grows slower. From $2,000 to $3,000, barely at all.\n\nThis is diminishing returns \u2014 a nonlinear function. If you fit a linear model to this data, your predictions will be wrong in systematic, predictable ways.\n\nRecognizing the shape of a relationship is the first step to choosing the right model."
+            },
+            {
+              "id": "exp1_unit2_practice",
+              "type": "practice",
+              "title": "Practice Problems",
+              "order": 5,
+              "estimatedMinutes": 15,
+              "problems": [
+                {
+                  "id": "p1",
+                  "type": "evaluate",
+                  "question": "If f(x) = 3x\u00b2 - 2x + 1, what is f(4)?",
+                  "answer": "41",
+                  "hint": "Substitute x = 4: 3(16) - 2(4) + 1",
+                  "explanation": "3(4\u00b2) - 2(4) + 1 = 3(16) - 8 + 1 = 48 - 8 + 1 = 41"
+                },
+                {
+                  "id": "p2",
+                  "type": "identify",
+                  "question": "Is f(x) = 5x - 7 linear or nonlinear? What is its slope?",
+                  "answer": "Linear; slope = 5",
+                  "hint": "Look for the form f(x) = mx + b",
+                  "explanation": "f(x) = 5x - 7 matches f(x) = mx + b with m = 5 and b = -7. It's linear with slope 5."
+                }
+              ]
+            },
+            {
+              "id": "exp1_unit2_quiz",
+              "type": "quiz",
+              "title": "Unit Quiz",
+              "order": 6,
+              "estimatedMinutes": 10,
+              "questions": [
+                {
+                  "id": "q1",
+                  "type": "multiple_choice",
+                  "question": "f(x) = 4x - 2. What is f(5)?",
+                  "options": [
+                    "18",
+                    "22",
+                    "20",
+                    "16"
+                  ],
+                  "answer": 0,
+                  "explanation": "4(5) - 2 = 20 - 2 = 18"
+                },
+                {
+                  "id": "q2",
+                  "type": "multiple_choice",
+                  "question": "Which is a nonlinear function?",
+                  "options": [
+                    "f(x) = 3x + 1",
+                    "f(x) = x\u00b2 + 2",
+                    "f(x) = -2x",
+                    "f(x) = 0.5x - 7"
+                  ],
+                  "answer": 1,
+                  "explanation": "x\u00b2 makes f(x) = x\u00b2 + 2 nonlinear \u2014 the graph is a parabola, not a line."
+                },
+                {
+                  "id": "q3",
+                  "type": "multiple_choice",
+                  "question": "What does f(3) mean?",
+                  "options": [
+                    "f multiplied by 3",
+                    "the output of function f when x = 3",
+                    "f divided by 3",
+                    "3 raised to the power f"
+                  ],
+                  "answer": 1,
+                  "explanation": "f(3) is function notation \u2014 it means evaluate function f at input x = 3."
+                }
+              ],
+              "checklist": [
+                "Evaluate a function at a given input",
+                "Identify whether a function is linear or nonlinear",
+                "Explain what function notation f(x) means"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "exp1_unit3",
+          "title": "Linear Relationships & Slope",
+          "order": 3,
+          "estimatedMinutes": 90,
+          "description": "The DNA of regression. Slope tells you how much one variable changes per unit change in another \u2014 which is exactly what a regression coefficient tells you.",
+          "objectives": [
+            "Calculate and interpret slope",
+            "Understand y-intercept meaning",
+            "Read equations of lines",
+            "Connect to correlation and regression"
+          ],
+          "sections": [
+            {
+              "id": "exp1_unit3_lesson1",
+              "type": "lesson",
+              "title": "Rise Over Run",
+              "order": 1,
+              "estimatedMinutes": 20,
+              "content": "Slope is rise over run: how much y changes per unit change in x.\n\nSlope = (y\u2082 - y\u2081) / (x\u2082 - x\u2081)\n\nIf a line passes through (0, 2) and (3, 8): slope = (8-2)/(3-0) = 6/3 = 2.\n\nThis means: for every 1 unit increase in x, y increases by 2. That's the entire intuition behind regression coefficients.",
+              "keyInsight": "Slope tells you the rate of change \u2014 how many units y moves per unit of x. It's the same thing as a regression coefficient."
+            },
+            {
+              "id": "exp1_unit3_lesson2",
+              "type": "lesson",
+              "title": "The y-Intercept",
+              "order": 2,
+              "estimatedMinutes": 15,
+              "content": "In y = mx + b, the b is the y-intercept: the value of y when x = 0.\n\nIn regression, the intercept is the baseline \u2014 the predicted value when all predictors are zero. Sometimes this has a meaningful interpretation; sometimes it doesn't (what does 'zero height' mean for predicting weight?).\n\nThe equation y = 2x + 3 means: start at 3 (when x = 0), then move up 2 for each unit of x.",
+              "keyInsight": "The y-intercept is the starting value \u2014 where the line begins before x has any effect."
+            },
+            {
+              "id": "exp1_unit3_lesson3",
+              "type": "lesson",
+              "title": "Slope in Context: Regression Coefficients",
+              "order": 3,
+              "estimatedMinutes": 25,
+              "content": "When you run a regression and see 'coefficient = 0.42', that's a slope. It means: for each 1-unit increase in the predictor, the outcome increases by 0.42 on average.\n\n'Users who see feature X convert at a rate 0.8 percentage points higher per additional session.' That's a slope.\n\nThis is why understanding slope is so fundamental to data work \u2014 it's the mathematical backbone of every regression result you'll ever interpret.",
+              "keyInsight": "A regression coefficient is a slope. Everything you know about slope applies directly to interpreting regression output."
+            },
+            {
+              "id": "exp1_unit3_practice",
+              "type": "practice",
+              "title": "Practice Problems",
+              "order": 4,
+              "estimatedMinutes": 20,
+              "problems": [
+                {
+                  "id": "p1",
+                  "type": "calculate",
+                  "question": "A line passes through points (2, 5) and (6, 13). Calculate the slope.",
+                  "answer": "2",
+                  "hint": "Use slope = (y\u2082 - y\u2081)/(x\u2082 - x\u2081)",
+                  "explanation": "(13 - 5)/(6 - 2) = 8/4 = 2"
+                },
+                {
+                  "id": "p2",
+                  "type": "interpret",
+                  "question": "A regression model says: conversions = 0.04 \u00d7 visitors + 12. What does the 0.04 mean?",
+                  "answer": "For each additional visitor, conversions increase by 0.04 on average.",
+                  "hint": "Think of 0.04 as the slope of the line.",
+                  "explanation": "The coefficient 0.04 is the slope \u2014 for every 1 additional visitor, the model predicts 0.04 more conversions (or equivalently, ~1 conversion per 25 visitors)."
+                }
+              ]
+            },
+            {
+              "id": "exp1_unit3_quiz",
+              "type": "quiz",
+              "title": "Unit Quiz",
+              "order": 5,
+              "estimatedMinutes": 10,
+              "questions": [
+                {
+                  "id": "q1",
+                  "type": "multiple_choice",
+                  "question": "A line passes through (1, 3) and (4, 12). What is the slope?",
+                  "options": [
+                    "2",
+                    "3",
+                    "4",
+                    "1.5"
+                  ],
+                  "answer": 1,
+                  "explanation": "(12-3)/(4-1) = 9/3 = 3"
+                },
+                {
+                  "id": "q2",
+                  "type": "multiple_choice",
+                  "question": "In y = -2x + 10, when x increases by 1, y:",
+                  "options": [
+                    "Increases by 2",
+                    "Decreases by 2",
+                    "Increases by 10",
+                    "Stays at 10"
+                  ],
+                  "answer": 1,
+                  "explanation": "The slope is -2, so each 1-unit increase in x causes a 2-unit decrease in y."
+                },
+                {
+                  "id": "q3",
+                  "type": "multiple_choice",
+                  "question": "A regression coefficient of 1.5 on 'page views' means:",
+                  "options": [
+                    "Conversions equal 1.5 regardless of views",
+                    "Each additional page view is associated with 1.5 more conversions",
+                    "1.5% of page views convert",
+                    "Views must be divided by 1.5"
+                  ],
+                  "answer": 1,
+                  "explanation": "A coefficient is a slope \u2014 1.5 units increase in y per 1 unit increase in x."
+                }
+              ],
+              "checklist": [
+                "Calculate slope from two points",
+                "Interpret y-intercept meaning",
+                "Translate a regression coefficient into plain English"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "exp1_unit4",
+          "title": "Exponents & Logarithms",
+          "order": 4,
+          "estimatedMinutes": 90,
+          "description": "You'll see these constantly in statistics and ML \u2014 exponential growth, log-scale charts, information theory, and model training all use them.",
+          "objectives": [
+            "Understand exponent rules",
+            "Grasp what logarithms actually do",
+            "Read log-scale charts correctly",
+            "Connect to natural log and growth models"
+          ],
+          "sections": [
+            {
+              "id": "exp1_unit4_lesson1",
+              "type": "lesson",
+              "title": "Exponent Rules",
+              "order": 1,
+              "estimatedMinutes": 20,
+              "content": "An exponent means repeated multiplication: x\u00b3 = x \u00d7 x \u00d7 x.\n\nKey rules:\n- x^a \u00d7 x^b = x^(a+b)  (multiply same base: add exponents)\n- x^a / x^b = x^(a-b)  (divide same base: subtract exponents)\n- (x^a)^b = x^(a\u00d7b)    (power of a power: multiply)\n- x^0 = 1              (anything to the 0 is 1)\n- x^(-a) = 1/x^a       (negative exponent = reciprocal)\n\nThese aren't arbitrary rules \u2014 they all follow from the definition of repeated multiplication.",
+              "keyInsight": "Exponent rules are shortcuts for repeated multiplication. Understanding them means you never have to memorize \u2014 just derive from first principles."
+            },
+            {
+              "id": "exp1_unit4_lesson2",
+              "type": "lesson",
+              "title": "What Logarithms Actually Do",
+              "order": 2,
+              "estimatedMinutes": 25,
+              "content": "A logarithm answers the question: 'What exponent do I need?'\n\nlog\u2082(8) = 3 because 2\u00b3 = 8. 'What power of 2 gives 8? Answer: 3.'\n\nlog\u2081\u2080(1000) = 3 because 10\u00b3 = 1000.\n\nln(x) is the natural log \u2014 log base e, where e \u2248 2.718. It's the most common log in statistics and ML.\n\nLogarithms compress large ranges. The difference between 1 and 10 on a log scale equals the difference between 10 and 100, and between 100 and 1,000. This is why income, frequency, and many natural phenomena are better described on log scales.",
+              "keyInsight": "A logarithm is the inverse of an exponent. If you know one, you know the other. And log scales make exponential growth look linear \u2014 which often reveals cleaner patterns."
+            },
+            {
+              "id": "exp1_unit4_lesson3",
+              "type": "lesson",
+              "title": "Natural Log and Growth",
+              "order": 3,
+              "estimatedMinutes": 20,
+              "content": "The natural log ln(x) appears everywhere in statistics because the number e is the base of natural exponential growth.\n\nIf something grows at a constant rate r continuously, the growth model is: y = y\u2080 \u00d7 e^(rt)\n\nTaking the log of both sides: ln(y) = ln(y\u2080) + rt\n\nThat's a linear equation! This is why log-transforming exponentially distributed data produces normally distributed data \u2014 it linearizes the growth.\n\nIn machine learning, the log-likelihood and cross-entropy loss both use natural logs. In Bayesian statistics, log probabilities are everywhere.",
+              "keyInsight": "Taking the logarithm of exponential data linearizes it. This is why ln-transformation is one of the most powerful tools in a data scientist's toolkit."
+            },
+            {
+              "id": "exp1_unit4_practice",
+              "type": "practice",
+              "title": "Practice Problems",
+              "order": 4,
+              "estimatedMinutes": 15,
+              "problems": [
+                {
+                  "id": "p1",
+                  "type": "calculate",
+                  "question": "Simplify: x\u2075 \u00d7 x\u00b3",
+                  "answer": "x\u2078",
+                  "hint": "When multiplying same bases, add exponents.",
+                  "explanation": "x\u2075 \u00d7 x\u00b3 = x^(5+3) = x\u2078"
+                },
+                {
+                  "id": "p2",
+                  "type": "evaluate",
+                  "question": "What is log\u2081\u2080(100,000)?",
+                  "answer": "5",
+                  "hint": "Ask: 10 to what power equals 100,000?",
+                  "explanation": "10\u2075 = 100,000, so log\u2081\u2080(100,000) = 5"
+                }
+              ]
+            },
+            {
+              "id": "exp1_unit4_quiz",
+              "type": "quiz",
+              "title": "Unit Quiz",
+              "order": 5,
+              "estimatedMinutes": 10,
+              "questions": [
+                {
+                  "id": "q1",
+                  "type": "multiple_choice",
+                  "question": "Simplify: 2\u2074 \u00d7 2\u00b3",
+                  "options": [
+                    "2\u2077",
+                    "2\u00b9\u00b2",
+                    "4\u2077",
+                    "8"
+                  ],
+                  "answer": 0,
+                  "explanation": "Same base, add exponents: 2^(4+3) = 2\u2077 = 128"
+                },
+                {
+                  "id": "q2",
+                  "type": "multiple_choice",
+                  "question": "log\u2082(32) = ?",
+                  "options": [
+                    "4",
+                    "5",
+                    "6",
+                    "16"
+                  ],
+                  "answer": 1,
+                  "explanation": "2\u2075 = 32, so log\u2082(32) = 5"
+                },
+                {
+                  "id": "q3",
+                  "type": "multiple_choice",
+                  "question": "Why are log scales useful for data with exponential growth?",
+                  "options": [
+                    "They make the numbers smaller",
+                    "They linearize the growth, revealing cleaner patterns",
+                    "They remove outliers",
+                    "They convert decimals to integers"
+                  ],
+                  "answer": 1,
+                  "explanation": "Log scales compress exponential growth into a linear form \u2014 making trends and ratios easier to see."
+                }
+              ],
+              "checklist": [
+                "Apply exponent rules to simplify expressions",
+                "Compute logarithms by asking 'what exponent?'",
+                "Explain why log transformation is useful for skewed data"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "exp1_unit5",
+          "title": "Summation Notation (\u03a3)",
+          "order": 5,
+          "estimatedMinutes": 60,
+          "description": "How statisticians write 'add a bunch of things up.' Once you can read \u03a3 notation, statistics papers become readable.",
+          "objectives": [
+            "Read \u03a3 notation fluently",
+            "Translate formulas between \u03a3 notation and plain language",
+            "Understand mean and variance formulas",
+            "Recognize \u03a3 in real statistical formulas"
+          ],
+          "sections": [
+            {
+              "id": "exp1_unit5_lesson1",
+              "type": "lesson",
+              "title": "Reading \u03a3 Notation",
+              "order": 1,
+              "estimatedMinutes": 20,
+              "content": "\u03a3 (sigma) means 'sum up.' The notation \u03a3\u1d62\u208c\u2081\u207f x\u1d62 means: 'add up all values of x from i=1 to i=n.'\n\nIn plain language: x\u2081 + x\u2082 + x\u2083 + ... + x\u2099\n\nThe i=1 below the \u03a3 is the starting index. The n above is the ending index. The x\u1d62 is what you're summing.\n\nExample: If you have test scores [85, 92, 78, 95, 88], then:\n\u03a3\u1d62\u208c\u2081\u2075 x\u1d62 = 85 + 92 + 78 + 95 + 88 = 438",
+              "keyInsight": "\u03a3 is just a compact way to write a sum. Unpack it into 'add up x\u2081, x\u2082, ..., x\u2099' and it becomes readable."
+            },
+            {
+              "id": "exp1_unit5_lesson2",
+              "type": "lesson",
+              "title": "Mean and Variance in \u03a3 Notation",
+              "order": 2,
+              "estimatedMinutes": 20,
+              "content": "The sample mean formula: x\u0304 = (1/n) \u00d7 \u03a3\u1d62\u208c\u2081\u207f x\u1d62\n\nIn English: 'add up all values, divide by n.' That's just the average.\n\nThe sample variance formula: s\u00b2 = (1/(n-1)) \u00d7 \u03a3\u1d62\u208c\u2081\u207f (x\u1d62 - x\u0304)\u00b2\n\nIn English: 'for each value, subtract the mean, square the result, add them all up, divide by n-1.'\n\nOnce you can read \u03a3, every statistics formula becomes a readable description of what to compute \u2014 not a cryptic symbol.",
+              "keyInsight": "\u03a3 notation in statistics formulas is always just an instruction to calculate something across all data points. Unpack the subscript and superscript to know what range to sum over."
+            },
+            {
+              "id": "exp1_unit5_practice",
+              "type": "practice",
+              "title": "Practice Problems",
+              "order": 3,
+              "estimatedMinutes": 15,
+              "problems": [
+                {
+                  "id": "p1",
+                  "type": "calculate",
+                  "question": "Given data: [4, 7, 2, 9, 3]. Calculate \u03a3\u1d62\u208c\u2081\u2075 x\u1d62 (the sum).",
+                  "answer": "25",
+                  "hint": "Just add them all up: 4 + 7 + 2 + 9 + 3",
+                  "explanation": "4 + 7 + 2 + 9 + 3 = 25"
+                },
+                {
+                  "id": "p2",
+                  "type": "calculate",
+                  "question": "Using the same data [4, 7, 2, 9, 3], calculate the mean x\u0304.",
+                  "answer": "5",
+                  "hint": "Mean = sum / n. You calculated the sum above.",
+                  "explanation": "x\u0304 = 25 / 5 = 5"
+                }
+              ]
+            },
+            {
+              "id": "exp1_unit5_quiz",
+              "type": "quiz",
+              "title": "Unit Quiz",
+              "order": 4,
+              "estimatedMinutes": 10,
+              "questions": [
+                {
+                  "id": "q1",
+                  "type": "multiple_choice",
+                  "question": "\u03a3\u1d62\u208c\u2081\u2074 x\u1d62 for data [3, 6, 2, 9] equals:",
+                  "options": [
+                    "15",
+                    "20",
+                    "5",
+                    "10"
+                  ],
+                  "answer": 1,
+                  "explanation": "3 + 6 + 2 + 9 = 20"
+                },
+                {
+                  "id": "q2",
+                  "type": "multiple_choice",
+                  "question": "The formula x\u0304 = (1/n) \u03a3 x\u1d62 computes:",
+                  "options": [
+                    "The median",
+                    "The sample mean",
+                    "The variance",
+                    "The standard deviation"
+                  ],
+                  "answer": 1,
+                  "explanation": "This is the sample mean formula \u2014 sum all values, divide by the count."
+                },
+                {
+                  "id": "q3",
+                  "type": "multiple_choice",
+                  "question": "In the variance formula s\u00b2 = (1/(n-1)) \u03a3(x\u1d62 - x\u0304)\u00b2, the term (x\u1d62 - x\u0304) represents:",
+                  "options": [
+                    "The average value",
+                    "How far each data point is from the mean",
+                    "The sum of all values",
+                    "The square root of the variance"
+                  ],
+                  "answer": 1,
+                  "explanation": "(x\u1d62 - x\u0304) is the deviation of each point from the mean \u2014 how far above or below average it is."
+                }
+              ],
+              "checklist": [
+                "Read and expand \u03a3 notation into a sum",
+                "Write the mean formula in \u03a3 notation and in plain language",
+                "Interpret variance as the average squared deviation from the mean"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exp2",
+      "title": "Descriptive Statistics & Data Intuition",
+      "theme": "What Does Your Data Actually Look Like?",
+      "order": 2,
+      "locked": true,
+      "funFact": "The standard deviation symbol \u03c3 (sigma) was introduced by Karl Pearson in 1894. He also invented the p-value \u2014 and famously feuded with Ronald Fisher, who then also invented the p-value slightly differently. That argument still echoes in statistics today.",
+      "jobConnection": "Every dashboard metric, every data quality check, every 'is this number weird?' question lives here.",
+      "units": [
+        {
+          "id": "exp2_unit1",
+          "title": "Measures of Center \u2014 mean, median, mode (and when each one lies to you)",
+          "order": 1,
+          "estimatedMinutes": 90,
+          "description": "The three ways to find the 'middle' of data \u2014 and how to pick the right one.",
+          "objectives": [
+            "Calculate mean, median, and mode",
+            "Know when each measure is appropriate",
+            "Understand how outliers affect each measure",
+            "Apply to real data scenarios"
+          ],
+          "sections": []
+        },
+        {
+          "id": "exp2_unit2",
+          "title": "Measures of Spread \u2014 variance, standard deviation, IQR",
+          "order": 2,
+          "estimatedMinutes": 90,
+          "description": "How spread out is your data? These measures tell you.",
+          "objectives": [
+            "Calculate variance and standard deviation",
+            "Understand IQR and percentiles",
+            "Compare spread across datasets",
+            "Identify outliers systematically"
+          ],
+          "sections": []
+        },
+        {
+          "id": "exp2_unit3",
+          "title": "Distributions \u2014 the shapes data makes and what they mean",
+          "order": 3,
+          "estimatedMinutes": 90,
+          "description": "Data has shapes. Recognizing those shapes tells you what's going on.",
+          "objectives": [
+            "Recognize common distribution shapes",
+            "Understand skewness and kurtosis",
+            "Connect shapes to real phenomena",
+            "Know when distribution assumptions matter"
+          ],
+          "sections": []
+        },
+        {
+          "id": "exp2_unit4",
+          "title": "The Normal Distribution \u2014 the bell curve and why it's everywhere",
+          "order": 4,
+          "estimatedMinutes": 90,
+          "description": "The most important distribution in statistics and why it appears so often.",
+          "objectives": [
+            "Understand the normal distribution parameters",
+            "Apply the 68-95-99.7 rule",
+            "Explain why the normal distribution appears in nature",
+            "Use normal distribution tables"
+          ],
+          "sections": []
+        },
+        {
+          "id": "exp2_unit5",
+          "title": "Percentiles, z-scores & standardization",
+          "order": 5,
+          "estimatedMinutes": 75,
+          "description": "How to compare values across different scales and distributions.",
+          "objectives": [
+            "Calculate and interpret percentiles",
+            "Compute z-scores",
+            "Standardize data",
+            "Compare apples to oranges with z-scores"
+          ],
+          "sections": []
+        },
+        {
+          "id": "exp2_unit6",
+          "title": "Correlation vs. causation",
+          "order": 6,
+          "estimatedMinutes": 75,
+          "description": "The most important distinction in data analysis \u2014 and the most commonly confused.",
+          "objectives": [
+            "Calculate Pearson correlation",
+            "Explain the difference between correlation and causation",
+            "Identify confounding variables",
+            "Give real examples of misleading correlations"
+          ],
+          "sections": []
+        }
+      ]
+    },
+    {
+      "id": "exp3",
+      "title": "Probability Theory",
+      "theme": "The Mathematics of Uncertainty",
+      "order": 3,
+      "locked": true,
+      "funFact": "Probability theory was essentially invented to solve gambling problems. In 1654, Blaise Pascal and Pierre de Fermat exchanged letters about a dice game dispute \u2014 and accidentally founded a field that now underpins all of science.",
+      "jobConnection": "Every A/B test, every confidence interval, every model prediction is a probability statement. This expedition is the biggest unlock for your work.",
+      "units": [
+        {
+          "id": "exp3_unit1",
+          "title": "Basic probability rules \u2014 AND, OR, complements",
+          "order": 1,
+          "estimatedMinutes": 75,
+          "description": "The fundamental rules of probability.",
+          "objectives": [
+            "Calculate probabilities using AND, OR rules",
+            "Apply complement rule",
+            "Build probability intuition",
+            "Avoid common probability mistakes"
+          ],
+          "sections": []
+        },
+        {
+          "id": "exp3_unit2",
+          "title": "Conditional probability \u2014 the foundation of Bayesian thinking",
+          "order": 2,
+          "estimatedMinutes": 90,
+          "description": "How does new information change a probability?",
+          "objectives": [
+            "Calculate conditional probabilities",
+            "Apply multiplication rule",
+            "Interpret P(A|B) notation",
+            "Connect to Bayes' theorem"
+          ],
+          "sections": []
+        },
+        {
+          "id": "exp3_unit3",
+          "title": "Bayes' Theorem \u2014 how to update beliefs with evidence",
+          "order": 3,
+          "estimatedMinutes": 90,
+          "description": "The most powerful idea in probability \u2014 and perhaps all of science.",
+          "objectives": [
+            "State and apply Bayes' theorem",
+            "Update prior probabilities with evidence",
+            "Understand posterior distributions conceptually",
+            "Apply to real decision problems"
+          ],
+          "sections": []
+        },
+        {
+          "id": "exp3_unit4",
+          "title": "Probability distributions \u2014 Binomial, Poisson, Normal",
+          "order": 4,
+          "estimatedMinutes": 90,
+          "description": "The mathematical models for different types of random phenomena.",
+          "objectives": [
+            "Identify which distribution applies when",
+            "Calculate binomial probabilities",
+            "Understand Poisson processes",
+            "Connect distributions to real data types"
+          ],
+          "sections": []
+        },
+        {
+          "id": "exp3_unit5",
+          "title": "Expected value \u2014 what 'average outcome' really means mathematically",
+          "order": 5,
+          "estimatedMinutes": 75,
+          "description": "The mathematical foundation of decision-making under uncertainty.",
+          "objectives": [
+            "Calculate expected value",
+            "Apply expected value to decisions",
+            "Understand linearity of expectation",
+            "Connect to sample mean and long-run average"
+          ],
+          "sections": []
+        },
+        {
+          "id": "exp3_unit6",
+          "title": "The Law of Large Numbers & Central Limit Theorem",
+          "order": 6,
+          "estimatedMinutes": 90,
+          "description": "Two of the most important theorems in all of statistics.",
+          "objectives": [
+            "State the Law of Large Numbers",
+            "Explain the Central Limit Theorem",
+            "Apply CLT to sampling scenarios",
+            "Understand why the normal distribution is so common"
+          ],
+          "sections": []
+        }
+      ]
+    },
+    {
+      "id": "exp4",
+      "title": "Inferential Statistics & Hypothesis Testing",
+      "theme": "Making Decisions From Noisy Data",
+      "order": 4,
+      "locked": true,
+      "funFact": "Ronald Fisher introduced the 0.05 significance threshold somewhat arbitrarily in 1925 \u2014 essentially saying it was 'convenient.' The entire field has debated it ever since, and in 2019, over 800 scientists signed a paper calling for it to be abandoned.",
+      "jobConnection": "This is your experimentation work. We're going to tear apart what your testing platform does step by step.",
+      "units": [
+        {
+          "id": "exp4_unit1",
+          "title": "Sampling theory \u2014 why samples represent populations",
+          "order": 1,
+          "estimatedMinutes": 75,
+          "description": "Why you can draw conclusions about millions from thousands.",
+          "objectives": [
+            "Understand random sampling",
+            "Identify sampling bias",
+            "Calculate sampling error",
+            "Design unbiased samples"
+          ],
+          "sections": []
+        },
+        {
+          "id": "exp4_unit2",
+          "title": "Confidence intervals \u2014 what that '95%' really means",
+          "order": 2,
+          "estimatedMinutes": 90,
+          "description": "One of the most misunderstood concepts in statistics.",
+          "objectives": [
+            "Construct confidence intervals",
+            "Correctly interpret confidence level",
+            "Debunk common misinterpretations",
+            "Connect to margin of error"
+          ],
+          "sections": []
+        },
+        {
+          "id": "exp4_unit3",
+          "title": "Hypothesis testing framework",
+          "order": 3,
+          "estimatedMinutes": 90,
+          "description": "The logical structure underlying all statistical tests.",
+          "objectives": [
+            "State null and alternative hypotheses",
+            "Understand test statistics",
+            "Apply decision rules",
+            "Avoid common logical errors"
+          ],
+          "sections": []
+        },
+        {
+          "id": "exp4_unit4",
+          "title": "p-values \u2014 the most misunderstood number in science",
+          "order": 4,
+          "estimatedMinutes": 90,
+          "description": "What a p-value actually means \u2014 and the four things it doesn't mean.",
+          "objectives": [
+            "Define p-value correctly",
+            "List common p-value misinterpretations",
+            "Interpret p-values in context",
+            "Understand p-hacking"
+          ],
+          "sections": []
+        },
+        {
+          "id": "exp4_unit5",
+          "title": "t-tests, z-tests, chi-square tests",
+          "order": 5,
+          "estimatedMinutes": 90,
+          "description": "The most common statistical tests and when to use each.",
+          "objectives": [
+            "Choose the right test for the scenario",
+            "Calculate test statistics",
+            "Interpret results",
+            "Check test assumptions"
+          ],
+          "sections": []
+        },
+        {
+          "id": "exp4_unit6",
+          "title": "Statistical power, Type I & Type II errors",
+          "order": 6,
+          "estimatedMinutes": 90,
+          "description": "How to design experiments that can actually detect the effects you care about.",
+          "objectives": [
+            "Define Type I and Type II errors",
+            "Calculate statistical power",
+            "Design adequately powered experiments",
+            "Navigate the power-sample size tradeoff"
+          ],
+          "sections": []
+        },
+        {
+          "id": "exp4_unit7",
+          "title": "Multiple testing problems",
+          "order": 7,
+          "estimatedMinutes": 75,
+          "description": "Why running many tests inflates false positive rates \u2014 and what to do about it.",
+          "objectives": [
+            "Understand family-wise error rate",
+            "Apply Bonferroni correction",
+            "Use FDR control methods",
+            "Design multi-metric experiments carefully"
+          ],
+          "sections": []
+        },
+        {
+          "id": "exp4_unit8",
+          "title": "Bayesian vs. Frequentist inference",
+          "order": 8,
+          "estimatedMinutes": 90,
+          "description": "Two fundamentally different philosophies of statistical reasoning.",
+          "objectives": [
+            "Articulate the frequentist philosophy",
+            "Articulate the Bayesian philosophy",
+            "Compare outputs of each approach",
+            "Know when each is more appropriate"
+          ],
+          "sections": []
+        }
+      ]
+    },
+    {
+      "id": "exp5",
+      "title": "Regression & Predictive Modeling",
+      "theme": "Finding Signal in the Noise",
+      "order": 5,
+      "locked": true,
+      "funFact": "The word 'regression' comes from Francis Galton's 1886 study of heights of parents and children. He noticed children of very tall parents tended to be slightly shorter \u2014 'regressing to the mean.' The math stuck around; the original meaning mostly didn't.",
+      "jobConnection": "Attribution models, propensity scoring, conversion prediction, causal inference in experiments \u2014 all live here.",
+      "units": [
+        {
+          "id": "exp5_unit1",
+          "title": "Simple linear regression \u2014 the math of drawing the best line",
+          "order": 1,
+          "estimatedMinutes": 90,
+          "description": "The most fundamental predictive model.",
+          "objectives": [
+            "Derive the regression line equation",
+            "Interpret slope and intercept",
+            "Calculate R\u00b2",
+            "Assess model fit"
+          ],
+          "sections": []
+        },
+        {
+          "id": "exp5_unit2",
+          "title": "Least squares \u2014 how the 'best fit' is actually calculated",
+          "order": 2,
+          "estimatedMinutes": 90,
+          "description": "The optimization principle behind regression.",
+          "objectives": [
+            "Understand the least squares objective",
+            "Calculate OLS estimates",
+            "Understand residuals",
+            "Connect to gradient descent"
+          ],
+          "sections": []
+        },
+        {
+          "id": "exp5_unit3",
+          "title": "Multiple regression \u2014 many variables at once",
+          "order": 3,
+          "estimatedMinutes": 90,
+          "description": "Extending regression to multiple predictors.",
+          "objectives": [
+            "Interpret multiple regression coefficients",
+            "Understand multicollinearity",
+            "Add and evaluate predictors",
+            "Build and compare models"
+          ],
+          "sections": []
+        },
+        {
+          "id": "exp5_unit4",
+          "title": "Regression diagnostics \u2014 how to know when your model is lying",
+          "order": 4,
+          "estimatedMinutes": 90,
+          "description": "The assumptions behind regression and how to check them.",
+          "objectives": [
+            "Check linearity assumption",
+            "Diagnose heteroscedasticity",
+            "Identify influential points",
+            "Assess normality of residuals"
+          ],
+          "sections": []
+        },
+        {
+          "id": "exp5_unit5",
+          "title": "Logistic regression \u2014 when your outcome is binary",
+          "order": 5,
+          "estimatedMinutes": 90,
+          "description": "Regression for yes/no outcomes like conversions.",
+          "objectives": [
+            "Understand log-odds and odds ratios",
+            "Interpret logistic regression coefficients",
+            "Calculate predicted probabilities",
+            "Evaluate binary classifiers"
+          ],
+          "sections": []
+        },
+        {
+          "id": "exp5_unit6",
+          "title": "Overfitting, underfitting & the bias-variance tradeoff",
+          "order": 6,
+          "estimatedMinutes": 90,
+          "description": "The fundamental tension in all of machine learning.",
+          "objectives": [
+            "Define bias and variance",
+            "Identify over/underfitting",
+            "Apply train/validation/test splits",
+            "Use cross-validation"
+          ],
+          "sections": []
+        },
+        {
+          "id": "exp5_unit7",
+          "title": "Introduction to regularization \u2014 Ridge, Lasso",
+          "order": 7,
+          "estimatedMinutes": 75,
+          "description": "How to prevent overfitting by penalizing complexity.",
+          "objectives": [
+            "Understand regularization concept",
+            "Compare Ridge and Lasso",
+            "Select regularization strength",
+            "Interpret regularized coefficients"
+          ],
+          "sections": []
+        }
+      ]
+    },
+    {
+      "id": "exp6",
+      "title": "Advanced Statistics for Experimentation & Data Science",
+      "theme": "The Cutting Edge of Your Field",
+      "order": 6,
+      "locked": true,
+      "funFact": "The word 'algebra' comes from a 9th-century Persian mathematician named al-Khw\u0101rizm\u012b. The word 'algorithm' also comes from his name.",
+      "jobConnection": "These are the methods that separate good data science orgs from great ones \u2014 and you'll be able to evaluate and contribute to them.",
+      "units": [
+        {
+          "id": "exp6_unit1",
+          "title": "Causal inference \u2014 difference-in-differences, instrumental variables",
+          "order": 1,
+          "estimatedMinutes": 90,
+          "description": "Moving beyond correlation to establish causation without randomized experiments.",
+          "objectives": [
+            "Apply difference-in-differences",
+            "Understand instrumental variables",
+            "Assess parallel trends assumption",
+            "Design quasi-experiments"
+          ],
+          "sections": []
+        },
+        {
+          "id": "exp6_unit2",
+          "title": "Sequential testing & always-valid p-values",
+          "order": 2,
+          "estimatedMinutes": 90,
+          "description": "How to run experiments you can peek at without inflating false positive rates.",
+          "objectives": [
+            "Understand peeking problem",
+            "Apply sequential testing methods",
+            "Calculate always-valid confidence intervals",
+            "Know when to stop an experiment"
+          ],
+          "sections": []
+        },
+        {
+          "id": "exp6_unit3",
+          "title": "Multi-armed bandits \u2014 when to stop experimenting and just ship",
+          "order": 3,
+          "estimatedMinutes": 90,
+          "description": "The explore/exploit tradeoff and its applications to experimentation.",
+          "objectives": [
+            "Understand explore vs. exploit",
+            "Apply epsilon-greedy and UCB",
+            "Compare bandits to A/B tests",
+            "Choose the right approach for your context"
+          ],
+          "sections": []
+        },
+        {
+          "id": "exp6_unit4",
+          "title": "Bootstrapping & permutation tests",
+          "order": 4,
+          "estimatedMinutes": 90,
+          "description": "Simulation-based inference when analytical solutions are hard.",
+          "objectives": [
+            "Apply bootstrap resampling",
+            "Run permutation tests",
+            "Construct bootstrap confidence intervals",
+            "Compare to parametric alternatives"
+          ],
+          "sections": []
+        },
+        {
+          "id": "exp6_unit5",
+          "title": "Dimensionality reduction concepts \u2014 PCA intuition",
+          "order": 5,
+          "estimatedMinutes": 75,
+          "description": "How to find structure in high-dimensional data.",
+          "objectives": [
+            "Understand principal components intuitively",
+            "Interpret explained variance",
+            "Apply PCA to data exploration",
+            "Know limitations of PCA"
+          ],
+          "sections": []
+        },
+        {
+          "id": "exp6_unit6",
+          "title": "Intro to Bayesian modeling \u2014 priors, posteriors, credible intervals",
+          "order": 6,
+          "estimatedMinutes": 90,
+          "description": "Building probabilistic models with explicit uncertainty quantification.",
+          "objectives": [
+            "Choose and justify priors",
+            "Compute posterior distributions",
+            "Construct credible intervals",
+            "Compare to frequentist confidence intervals"
+          ],
+          "sections": []
+        },
+        {
+          "id": "exp6_unit7",
+          "title": "Effect sizes & practical vs. statistical significance",
+          "order": 7,
+          "estimatedMinutes": 75,
+          "description": "Why a statistically significant result can still be practically meaningless.",
+          "objectives": [
+            "Calculate Cohen's d and other effect sizes",
+            "Distinguish statistical from practical significance",
+            "Communicate effect sizes to stakeholders",
+            "Design experiments around minimum detectable effects"
+          ],
+          "sections": []
+        }
+      ]
+    }
+  ]
+}
