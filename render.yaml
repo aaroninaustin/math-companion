@@ -8,6 +8,8 @@ services:
     startCommand: uvicorn app:app --host 0.0.0.0 --port $PORT
     healthCheckPath: /health
     envVars:
+      - key: PYTHON_VERSION
+        value: 3.13.0      # libsql-experimental ships no wheel for 3.14
       - key: TURSO_DATABASE_URL
         sync: false        # you'll paste this in the Render dashboard
       - key: TURSO_AUTH_TOKEN
